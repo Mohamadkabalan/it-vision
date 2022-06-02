@@ -17,35 +17,13 @@ Route::get('/', function () {
     return view('home.index');
 });
 
-Route::get('locale/{locale}',function($locale){
-    Session::put('locale',$locale);
-    return redirect()->back();
-})->name('switchLan');  //add name to router
-
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
-Route::post('appointment/create',function($locale){
-    Session::put('locale',$locale);
-    return redirect()->back();
-})->name('switchLan');
-
-Route::post('/appointment/create', 'App\Http\Controllers\AppointmentController@store')
-    ->name('appointment.store');
 
 Route::get('/about', function () {
     return view('about.index');
 });
 
-Route::get('/testimonials', function () {
-    return view('testimonials.index');
-});
 
-Route::get('/shop', function () {
-    return view('shop.index');
-});
+
 
 Route::get('/services', 'App\Http\Controllers\ServicesController@index')
     ->name('services.index');
@@ -61,9 +39,6 @@ Route::get('/blogs/fetch_data', 'App\Http\Controllers\BlogsController@fetchData'
     ->name('blogs.fetch-data');
 Route::get('/blog-details/{id}', 'App\Http\Controllers\BlogsController@blogDetails')
     ->name('blogs.blog-details');
-
-Route::get('/diet-plan/{id}', 'App\Http\Controllers\DietPlanController@fetchDiet')
-    ->name('diet-plan.');
 
 Route::get('/contact-us', function () {
     return view('contact-us.index');
