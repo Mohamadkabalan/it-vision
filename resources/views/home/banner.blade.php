@@ -1,74 +1,131 @@
-@php $banners = \App\Banner::all();  @endphp
+{{--@php $banners = \App\Banner::all();  @endphp
 @if($banners)
-    {{--<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            @foreach($banners as $key => $banner)
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{$key}}" class="@if($key==0) active @endif" aria-current="@if($key==0) true @endif" aria-label="Slide {{ $key + 1  }}"></button>
-            @endforeach
-        </div>
-        <div class="carousel-inner">
-            @foreach($banners as $key => $banner)
-            <div class="carousel-item @if($key==0) active @endif">
-                <img src=" {{ 'storage/'.str_replace('\\', '/', $banner->image) }}" class="d-block w-100" alt="{{$banner->title_en}}">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="banner-title" >@if($lang=='en') {{$banner->title_en}} @else {{$banner->title_ar}}  @endif</h2>
-                    <h3 class="banner-text">@if($lang=='en') {{$banner->text_en}} @else {{$banner->text_ar}}  @endif</h3>
-                </div>
-            </div>
-            @endforeach
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>--}}
+@endif--}}
+<span class="toggle_menu_side header-slide">
+				<span></span>
+			</span>
 
-    <!-- Banner Area -->
-    <div class="banner-slider-area">
-        <div class="banner-slider owl-carousel owl-theme">
-            @foreach($banners as $key => $banner)
-            <div class="banner-item">
+<section class="page_slider main_slider">
+    <div class="flexslider" data-nav="true" data-dots="false">
+        <ul class="slides">
+            <li class="ds text-center slide1">
+                <span class="flexslider-overlay"></span>
+                <span class="embed-responsive embed-responsive-16by9">
+								<iframe src="https://www.youtube.com/embed/UBufeh1yv2c?feature=oembed&;showinfo=0&;autoplay=1&;controls=0&;mute=1&;loop=1&;playlist=UBufeh1yv2c" allowfullscreen=""></iframe>
+							</span>
                 <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="banner-item-content">
-                                <h1>@if($lang=='en') {{$banner->title_en}} @else {{$banner->title_ar}}  @endif</h1>
-                                <p>@if($lang=='en') {{$banner->text_en}} @else {{$banner->text_ar}}  @endif</p>
-                            </div>
-                        </div>
+                    <div class="row">
+                        <div class="col-12 itro_slider">
+                            <div class="intro_layers_wrapper">
+                                <div class="intro_layers">
+                                    <div class="intro_layer" data-animation="fadeIn">
+                                        <p class="text-uppercase intro_after_featured_word">welcome to</p>
+                                    </div>
 
-                        <div class="col-lg-6 pe-0">
-                            <div class="banner-item-img">
-                                <img src=" {{ 'storage/'.str_replace('\\', '/', $banner->image) }}" alt="Banner Images">
+                                    <div class="intro_layer" data-animation="slideRight">
+                                        <h2 class="text-uppercase intro_featured_word">
+                                            it agency
+                                        </h2>
+                                    </div>
+                                    <div class="intro_layer" data-animation="fadeIn">
+                                        <h3 class="intro_before_featured_word">
+                                            <span class="color-main2">Web Design</span>,
+                                            <span class="color-main3">Marketing</span> &
+                                            <span class="color-main4">Branding</span>
+                                        </h3>
+                                    </div>
+                                    <div class="intro_layer page-bottom" data-animation="expandUp">
+                                        <a class="btn btn-maincolor" href="about.html">Get Started</a>
+                                    </div>
+                                </div>
+                                <!-- eof .intro_layers -->
                             </div>
+                            <!-- eof .intro_layers_wrapper -->
                         </div>
+                        <!-- eof .col-* -->
                     </div>
+                    <!-- eof .row -->
                 </div>
-            </div>
-            @endforeach
-        </div>
+                <!-- eof .container -->
+            </li>
+            <li class="ds text-center slide2">
+                <span class="flexslider-overlay"></span>
+                <img src="{{ asset('images/slide_02.jpg') }}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 itro_slider">
+                            <div class="intro_layers_wrapper">
+                                <div class="intro_layers">
+                                    <div class="intro_layer" data-animation="fadeIn">
+                                        <h3 class="text-lowercase intro_before_featured_word">
+                                            Online
+                                        </h3>
+                                    </div>
+                                    <div class="intro_layer" data-animation="fadeIn">
+                                        <h2 class="text-uppercase intro_featured_word">
+                                            Marketing
+                                        </h2>
+                                    </div>
+                                    <div class="intro_layer" data-animation="pullDown">
+                                        <p class="text-uppercase intro_after_featured_word">Solutions</p>
+                                    </div>
+                                    <div class="intro_layer page-bottom" data-animation="expandUp">
+                                        <a class="btn btn-maincolor" href="about.html">Get Started</a>
+                                    </div>
+                                </div>
+                                <!-- eof .intro_layers -->
+                            </div>
+                            <!-- eof .intro_layers_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+            <li class="ds text-center slide3">
+                <img src="{{ asset('images/slide_03.jpg') }}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 itro_slider">
+                            <div class="intro_layers_wrapper">
+                                <div class="intro_layers">
+                                    <div class="intro_layer" data-animation="fadeInRight">
+                                        <h2 class="text-uppercase intro_featured_word light">
+                                            Modern
+                                        </h2>
+                                    </div>
+                                    <div class="intro_layer" data-animation="fadeIn">
+                                        <h2 class="text-uppercase intro_featured_word bold">
+                                            Marketing & design
+                                        </h2>
+                                    </div>
+                                    <div class="intro_layer" data-animation="fadeIn">
+                                        <h2 class="text-uppercase intro_featured_word">
+                                            That works
+                                        </h2>
+                                    </div>
 
-        <div class="banner-shape-two">
-            <img src="{{ asset('images/shape/shape1.png')  }} " alt="Banner Images">
-            <img src="{{ asset('images/shape/shape2.png')  }} " alt="Banner Images">
-            <img src="{{ asset('images/shape/shape3.png')  }}" alt="Banner Images">
-        </div>
+                                    <div class="intro_layer page-bottom" data-animation="expandUp">
+                                        <a class="btn btn-maincolor" href="about.html">Get Started</a>
+                                        <a class="btn btn-outline-maincolor" href="#">our folio</a>
+                                    </div>
+                                </div>
+                                <!-- eof .intro_layers -->
+                            </div>
+                            <!-- eof .intro_layers_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+
+        </ul>
     </div>
-    <!-- Banner Area End -->
-
-
-
-
-
-
-
-
-
-
-
-
-@endif
+    <!-- eof flexslider -->
+    <div class="flexslider-bottom d-none d-xl-block">
+        <a href="#about" class="mouse-button animated floating"></a>
+    </div>
+</section>

@@ -1,4 +1,4 @@
-@php $lang=app()->getLocale(); $page='services';  @endphp
+@php  $page='services';  @endphp
 @extends('layouts.master')
 
 @section('page_title')
