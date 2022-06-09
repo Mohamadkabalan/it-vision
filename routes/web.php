@@ -22,9 +22,6 @@ Route::get('/about', function () {
     return view('about.index');
 });
 
-
-
-
 Route::get('/services', 'App\Http\Controllers\ServicesController@index')
     ->name('services.index');
 Route::get('/services/fetch_data', 'App\Http\Controllers\ServicesController@fetch_data')
@@ -32,13 +29,13 @@ Route::get('/services/fetch_data', 'App\Http\Controllers\ServicesController@fetc
 Route::get('/service-details/{id}', 'App\Http\Controllers\ServicesController@serviceDetails')
     ->name('services.service-details');
 
+Route::get('/works', function () {
+  return view('works.index');
+});
 
-Route::get('/blogs', 'App\Http\Controllers\BlogsController@index')
-    ->name('blogs.index');
-Route::get('/blogs/fetch_data', 'App\Http\Controllers\BlogsController@fetchData')
-    ->name('blogs.fetch-data');
-Route::get('/blog-details/{id}', 'App\Http\Controllers\BlogsController@blogDetails')
-    ->name('blogs.blog-details');
+Route::get('/career', function () {
+  return view('career.index');
+});
 
 Route::get('/contact-us', function () {
     return view('contact-us.index');
@@ -72,4 +69,8 @@ Route::get('/migrate', function() {
     $output = [];
     \Artisan::call('migrate', $output);
     dd($output);
+});
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
 });

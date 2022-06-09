@@ -13154,16 +13154,7 @@ a img.aligncenter {
 		z-index: 99;
 	}
 
-	.sf-menu > li > a:after {
-		color: #fff;
-		content: "\f111";
-		font-family: FontAwesome;
-		font-size: 5px;
-		margin-left: 0;
-		position: relative;
-		right: -25px;
-		top: -3px;
-	}
+
 
 	.sf-menu li:hover > ul,
 	.sf-menu li.sfHover > ul {

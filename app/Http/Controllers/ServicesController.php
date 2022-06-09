@@ -10,7 +10,8 @@ class ServicesController extends Controller
 
     function index()
     {
-        $data = DB::table('services')->paginate(6);
+        /*$data = DB::table('services')->paginate(6);*/
+        $data=[];
         return view('services.index', compact('data'));
     }
 

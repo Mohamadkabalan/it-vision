@@ -22,7 +22,9 @@
                     </div>
                     <div>
                         <div class="divider-40"></div>
-                        <button type="button" class="btn btn-outline-maincolor">Get Started</button>
+                            <a target="_blank" href="https://wa.me/+96176053730">
+                                <button type="button" class="btn btn-outline-maincolor">Get Started</button>
+                            </a>
                         <div class="divider-40"></div>
                     </div>
                     <div class="img-wrap text-center">

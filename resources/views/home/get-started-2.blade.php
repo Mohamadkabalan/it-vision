@@ -18,7 +18,7 @@
                 <img src="img/vertical_line.png" alt="">
                 <div>
                     <div class="divider-40"></div>
-                    <a href="#" class="btn btn-outline-maincolor">Let’s Talk!</a>
+                    <a target="_blank" href="https://wa.me/+96176053730" class="btn btn-outline-maincolor">Let’s Talk!</a>
                     <div class="divider-30"></div>
                 </div>
                 <div class="img-wrap overflow-visible">
