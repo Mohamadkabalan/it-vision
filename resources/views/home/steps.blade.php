@@ -83,7 +83,7 @@
             <img src="img/vertical_line2.png" alt="">
         </div>
         <div class=" white-button text-center">
-            <a class="btn white-btn" href="#">Get Started</a>
+            <a class="btn white-btn" target="_blank" href="https://wa.me/+96176053730">Get Started</a>
         </div>
         <div class="divider-30 d-none d-xl-block"></div>
     </div>

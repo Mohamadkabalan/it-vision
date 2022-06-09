@@ -16,9 +16,7 @@
                     Call Us
                 </h6>
                 <p>
-                    <strong>New Accounts:</strong> 1-800-123-4567
-                    <br>
-                    <strong>Support:</strong> 1-800-123-4569
+                    <strong>New Accounts:</strong> +961-76053730
                 </p>
             </div>
             <div class="col-lg-4 text-center">
@@ -31,8 +29,7 @@
                     Write Us
                 </h6>
                 <p>
-                    example@example.com
-                    <br> example@example.com
+                    info@itvision.me
                 </p>
             </div>
             <div class="col-lg-4 text-center">
@@ -45,8 +42,7 @@
                     Visit Us
                 </h6>
                 <p>
-                    2231 Sycamore Lake Road
-                    <br> Green Bay, WI 54304
+                    Lebanon, Koura, Ras Maska
                 </p>
             </div>
         </div>

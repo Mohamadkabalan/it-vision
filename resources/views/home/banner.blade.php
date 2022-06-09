@@ -24,7 +24,7 @@
 
                                     <div class="intro_layer" data-animation="slideRight">
                                         <h2 class="text-uppercase intro_featured_word">
-                                            it agency
+                                            it Vision
                                         </h2>
                                     </div>
                                     <div class="intro_layer" data-animation="fadeIn">
@@ -35,7 +35,7 @@
                                         </h3>
                                     </div>
                                     <div class="intro_layer page-bottom" data-animation="expandUp">
-                                        <a class="btn btn-maincolor" href="about.html">Get Started</a>
+                                        <a class="btn btn-maincolor" target="_blank" href="https://wa.me/+96176053730">Get Started</a>
                                     </div>
                                 </div>
                                 <!-- eof .intro_layers -->
@@ -70,7 +70,7 @@
                                         <p class="text-uppercase intro_after_featured_word">Solutions</p>
                                     </div>
                                     <div class="intro_layer page-bottom" data-animation="expandUp">
-                                        <a class="btn btn-maincolor" href="about.html">Get Started</a>
+                                        <a class="btn btn-maincolor"  target="_blank" href="https://wa.me/+96176053730">Get Started</a>
                                     </div>
                                 </div>
                                 <!-- eof .intro_layers -->
@@ -107,7 +107,7 @@
                                     </div>
 
                                     <div class="intro_layer page-bottom" data-animation="expandUp">
-                                        <a class="btn btn-maincolor" href="about.html">Get Started</a>
+                                        <a class="btn btn-maincolor"  target="_blank" href="https://wa.me/+96176053730">Get Started</a>
                                         <a class="btn btn-outline-maincolor" href="#">our folio</a>
                                     </div>
                                 </div>
@@ -126,6 +126,6 @@
     </div>
     <!-- eof flexslider -->
     <div class="flexslider-bottom d-none d-xl-block">
-        <a href="#about" class="mouse-button animated floating"></a>
+        <a href="/about" class="mouse-button animated floating"></a>
     </div>
 </section>

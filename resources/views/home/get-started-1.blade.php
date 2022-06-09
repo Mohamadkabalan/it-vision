@@ -5,7 +5,7 @@
             <div class="col-md-8 offset-md-2">
                 <div class="text-block text-center">
                     <div class="btn-book-section overflow-visible">
-                        <a href="#" class="btn btn-maincolor">Get Started</a>
+                        <a target="_blank" href="https://wa.me/+96176053730" class="btn btn-maincolor">Get Started</a>
                     </div>
                     <div class="img-wrap text-center">
                         <img src="img/vertical_line.png" alt="">
@@ -88,7 +88,7 @@
                     <img src="img/vertical_line.png" alt="">
                 </div>
                 <div class="divider-40"></div>
-                <a href="#" class="btn btn-outline-maincolor">Get Started</a>
+                <a target="_blank" href="https://wa.me/+96176053730" class="btn btn-outline-maincolor">Get Started</a>
                 <div class="divider-40"></div>
                 <div>
                     <img src="img/vertical_line.png" alt="">

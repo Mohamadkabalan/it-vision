@@ -15,63 +15,214 @@
 
 @section('content-wrapper')
     @include('home.navbar')
-    <!-- Inner Banner -->
-    <div class="inner-banner inner-bg8">
+    <section class="page_title ls s-py-50 corner-title ls invise overflow-visible">
         <div class="container">
-            <div class="inner-title text-center">
-                <h3>{{ __('translation.services') }}</h3>
-                <ul>
-                    <li>
-                        <a href="/">{{ __('translation.home')  }}</a>
-                    </li>
-                    <li>{{ __('translation.services')}}</li>
-                </ul>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Services 1</h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="./">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Pages</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            Services 1
+                        </li>
+                    </ol>
+                    <div class="divider-15 d-none d-xl-block"></div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Inner Banner End -->
+    </section>
 
-    <!-- Services Area -->
-    <div class="services-area pt-100 pb-70">
+
+    <section class="ls s-pt-30 s-pb-20 s-pb-lg-50 s-pt-lg-50 c-gutter-60 c-mb-40 c-mb-md-60 service-item2">
+        <div class="d-none d-lg-block divider-65"></div>
         <div class="container">
-            <div class="section-title text-center">
-                <span>{{ __('translation.what-we-offer')  }}</span>
-                <h2></h2>
-            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
 
-            <div id="data-content" class="data-content row pt-45 justify-content-center">
+                    <div class="vertical-item text-center">
+                        <div class="item-media">
+                            <img src="images/service/service_icon_1-1.png" alt="">
+                        </div>
+                        <div class="item-content">
+                            <h6>
+                                <a href="service-single1.html">Marketing</a>
+                            </h6>
 
-                @include('services.services-content')
+                            <p>
+                                We use strategic marketing tactics that have been proven to work.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- .col-* -->
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="vertical-item text-center">
+                        <div class="item-media">
+                            <img src="images/service/service_icon_2-1.png" alt="">
+                        </div>
+                        <div class="item-content">
+                            <h6>
+                                <a href="service-single1.html">Development</a>
+                            </h6>
+
+                            <p>
+                                Custom programming for most complex functions you can think.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- .col-* -->
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="vertical-item text-center">
+                        <div class="item-media">
+                            <img src="images/service/service_icon_3-1.png" alt="">
+                        </div>
+                        <div class="item-content">
+                            <h6>
+                                <a href="service-single1.html">Web Design</a>
+                            </h6>
+
+                            <p>
+                                Pork chop pork belly hamburger prosciutto, fatback andouille flank.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- .col-* -->
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="vertical-item text-center">
+                        <div class="item-media">
+                            <img src="images/service/service_icon_4-1.png" alt="">
+                        </div>
+                        <div class="item-content">
+                            <h6>
+                                <a href="service-single1.html">SEO Optimization</a>
+                            </h6>
+
+                            <p>
+                                Optimizing our web designs to rank on the first page of google is our specialty.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- .col-* -->
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="vertical-item text-center">
+                        <div class="item-media">
+                            <img src="images/service/service_icon_5-1.png" alt="">
+                        </div>
+                        <div class="item-content">
+                            <h6>
+                                <a href="service-single1.html">Ecommerce</a>
+                            </h6>
+
+                            <p>
+                                We build your online store using a flexible, modular platform that allows
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- .col-* -->
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="vertical-item text-center">
+                        <div class="item-media">
+                            <img src="images/service/service_icon_6-1.png" alt="">
+                        </div>
+                        <div class="item-content">
+                            <h6>
+                                <a href="service-single1.html">Branding</a>
+                            </h6>
+
+                            <p>
+                                A solid brand strategy, logo and guidelines help you to get You recognized.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- .col-* -->
+                <div class="d-none d-lg-block divider-10"></div>
             </div>
         </div>
-    </div>
-    <!-- Services Area End -->
+    </section>
+
+    <section class="s-pb-130 s-pb-lg-170">
+        <div class="container">
+            <form class="contact-form c-mb-20 c-gutter-20">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group has-placeholder">
+                            <label for="name">Full Name
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group has-placeholder">
+                            <label for="email">Email address
+                                <span class="required">*</span>
+                            </label>
+                            <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email Adress">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <div class="form-group has-placeholder">
+                            <label for="phone">Phone Number
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group has-placeholder">
+                            <label for="subject">Your Topic
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control" placeholder="Your Topic">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group has-placeholder">
+                            <label for="message">Your Message</label>
+                            <textarea aria-required="true" rows="6" cols="45" name="message" id="message" class="form-control" placeholder="Your Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-center mt-15">
+                        <div class="form-group">
+                            <button type="submit" id="contact_form_submit" name="contact_submit" class="btn btn-maincolor">submit
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="d-none d-lg-block divider-75"></div>
+    </section>
+
 
 @endsection
 
 @push('scripts')
-    <script>
-        $(document).ready(function(){
-
-            $(document).on('click', '.page-link', function(event){
-                event.preventDefault();
-                var page = $(this).attr('href').split('page=')[1];
-                if(page){
-                    fetch_data(page);
-                }
-            });
-
-            function fetch_data(page)
-            {
-                $.ajax({
-                    url:"/services/fetch_data?page="+page,
-                    success:function(data)
-                    {
-                        $('#data-content').html(data);
-                    }
-                });
-            }
-
-        });
-    </script>
 @endpush
