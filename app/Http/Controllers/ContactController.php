@@ -13,8 +13,7 @@ class ContactController extends Controller
             $contact=new Contact();
             $contact->name=$data["name"];
             $contact->email=$data["email"];
-            $contact->phone=$data["phone_number"];
-            $contact->subject=$data["msg_subject"];
+            $contact->subject=$data["subject"];
             $contact->message=$data["message"];
             $contact->save();
             return response()->json(['status'=>200,'message'=>'Your message has been sent successfully']);

@@ -19,16 +19,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1>Services 1</h1>
+                    <h1>Services</h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="./">Home</a>
                         </li>
-                        <li class="breadcrumb-item">
-                            <a href="#">Pages</a>
-                        </li>
                         <li class="breadcrumb-item active">
-                            Services 1
+                            Services
                         </li>
                     </ol>
                     <div class="divider-15 d-none d-xl-block"></div>
@@ -50,7 +47,7 @@
                         </div>
                         <div class="item-content">
                             <h6>
-                                <a href="service-single1.html">Marketing</a>
+                                <a href="javascript:;">Marketing</a>
                             </h6>
 
                             <p>
@@ -69,7 +66,7 @@
                         </div>
                         <div class="item-content">
                             <h6>
-                                <a href="service-single1.html">Development</a>
+                                <a href="javascript:;">Development</a>
                             </h6>
 
                             <p>
@@ -88,7 +85,7 @@
                         </div>
                         <div class="item-content">
                             <h6>
-                                <a href="service-single1.html">Web Design</a>
+                                <a href="javascript:;">Web Design</a>
                             </h6>
 
                             <p>
@@ -106,7 +103,7 @@
                         </div>
                         <div class="item-content">
                             <h6>
-                                <a href="service-single1.html">SEO Optimization</a>
+                                <a href="javascript:;">SEO Optimization</a>
                             </h6>
 
                             <p>
@@ -124,7 +121,7 @@
                         </div>
                         <div class="item-content">
                             <h6>
-                                <a href="service-single1.html">Ecommerce</a>
+                                <a href="javascript:;">Ecommerce</a>
                             </h6>
 
                             <p>
@@ -143,7 +140,7 @@
                         </div>
                         <div class="item-content">
                             <h6>
-                                <a href="service-single1.html">Branding</a>
+                                <a href="javascript:;">Branding</a>
                             </h6>
 
                             <p>
@@ -157,68 +154,6 @@
                 <div class="d-none d-lg-block divider-10"></div>
             </div>
         </div>
-    </section>
-
-    <section class="s-pb-130 s-pb-lg-170">
-        <div class="container">
-            <form class="contact-form c-mb-20 c-gutter-20">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group has-placeholder">
-                            <label for="name">Full Name
-                                <span class="required">*</span>
-                            </label>
-                            <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group has-placeholder">
-                            <label for="email">Email address
-                                <span class="required">*</span>
-                            </label>
-                            <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email Adress">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-sm-6">
-                        <div class="form-group has-placeholder">
-                            <label for="phone">Phone Number
-                                <span class="required">*</span>
-                            </label>
-                            <input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control" placeholder="Phone Number">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group has-placeholder">
-                            <label for="subject">Your Topic
-                                <span class="required">*</span>
-                            </label>
-                            <input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control" placeholder="Your Topic">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group has-placeholder">
-                            <label for="message">Your Message</label>
-                            <textarea aria-required="true" rows="6" cols="45" name="message" id="message" class="form-control" placeholder="Your Message"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 text-center mt-15">
-                        <div class="form-group">
-                            <button type="submit" id="contact_form_submit" name="contact_submit" class="btn btn-maincolor">submit
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-            </form>
-        </div>
-        <div class="d-none d-lg-block divider-75"></div>
     </section>
 
 
