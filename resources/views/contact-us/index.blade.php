@@ -20,16 +20,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1>Contact 2</h1>
+                    <h1>Contact</h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="./">Home</a>
                         </li>
-                        <li class="breadcrumb-item">
-                            <a href="#">Pages</a>
-                        </li>
                         <li class="breadcrumb-item active">
-                            Contact 2
+                            Contact
                         </li>
                     </ol>
                     <div class="divider-15 d-none d-xl-block"></div>
@@ -83,11 +80,17 @@
                     </p>
                 </div>
             </div>
-            <div class="divider-60 d-none d-xl-block"></div>
+            <div class="row pt-2">
+                <div class="col-md-12">
+                    <div class="alert" role="alert">
+                        <p id="alert-message"></p>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-12 ">
-                    <form class="contact-form" method="post" action="/">
-
+                    <form id="contactForm" method="post">
+                        @csrf
                         <div class="row c-gutter-20">
 
                             <div class="col-12 col-md-6">
@@ -95,26 +98,26 @@
                                     <label for="name">Full Name
                                         <span class="required">*</span>
                                     </label>
-                                    <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control text-left" placeholder="Full Name">
+                                    <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control text-left" placeholder="Full Name" required>
                                 </div>
                                 <div class="form-group has-placeholder ">
                                     <label for="email">Email address
                                         <span class="required">*</span>
                                     </label>
-                                    <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control text-left" placeholder="Email Address">
+                                    <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control text-left" placeholder="Email Address"  required>
                                 </div>
                                 <div class="form-group has-placeholder">
                                     <label for="subject">Subject
                                         <span class="required">*</span>
                                     </label>
-                                    <input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control text-left" placeholder="Phone Number">
+                                    <input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control text-left" placeholder="Subject"  required>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
 
                                 <div class="form-group has-placeholder">
                                     <label for="message">Message</label>
-                                    <textarea aria-required="true" rows="6" cols="45" name="message" id="message" class="form-control text-left" placeholder="Your Message"></textarea>
+                                    <textarea aria-required="true" rows="6" cols="45" name="message" id="message" class="form-control text-left" placeholder="Your Message"  required></textarea>
                                 </div>
                             </div>
                         </div>
@@ -124,22 +127,19 @@
                                     <button type="submit" id="contact_form_submit" name="contact_submit" class="btn btn-maincolor">Send Message</button>
                                 </div>
                             </div>
-
                         </div>
+
                     </form>
 
                 </div>
                 <!--.col-* -->
-
-                <div class="divider-80 d-none d-xl-block"></div>
-
             </div>
         </div>
     </section>
     <section class="about-map ms page_map" data-draggable="false" data-scrollwheel="false">
 
         <div class="marker">
-            <div class="marker-address">2231 Sycamore, Green Bay, WI 54304</div>
+            <div class="marker-address">Lebanon, North, Koura, Rasmaska</div>
             <div class="marker-description">
 
                 <ul class="list-unstyled">
@@ -150,7 +150,7 @@
 									</span>
 
 									<span>
-										2231 Sycamore, Green Bay, WI 54304
+										Lebanon, North, Koura, Rasmaska
 									</span>
 								</span>
                     </li>
@@ -189,4 +189,31 @@
 @endsection
 
 @push('scripts')
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnUKjS6BAjGhL8XL8SacAYmDQMpWEchXs&callback=initMap&libraries=&v=weekly"></script>
+    <script>
+        $(document).ready(function() {
+            $(document).on('submit','#contactForm',function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: "/contact/create",
+                    method: "POST",
+                    data : new FormData(this),
+                    dataType: "json",
+                    contentType: false,
+                    cache: false,
+                    processData:false,
+                    success: function (data) {
+                        if(data.status==200){
+                            $('#contactForm')[0].reset();
+                            $('#alert-message').html(data.message);
+                            $('.alert').addClass('alert-success');
+                        }else{
+                            $('#alert-message').html(data.message);
+                            $('.alert').addClass('alert-danger');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 @endpush

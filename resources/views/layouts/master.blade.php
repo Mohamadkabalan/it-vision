@@ -57,9 +57,9 @@
 </div>
 <![endif]-->
 
-{{--<div class="preloader">
+<div class="preloader">
     <div class="preloader_image"></div>
-</div>--}}
+</div>
 
 <!-- search modal -->
 <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">

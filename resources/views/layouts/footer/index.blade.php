@@ -6,11 +6,9 @@
                 <div class="col-md-12 mt-4 text-center animate" data-animation="fadeInUp">
                     <img class="margin-negative" src="{{ asset('images//footer_logo.png') }}" alt="">
                     <div class="widget widget_social_buttons">
-                        <a href="http://www.facebook.com/#" class="fa fa-facebook color-icon" title="facebook"></a>
-                        <a href="http://www.twitter.com/#" class="fa fa-twitter color-icon" title="twitter"></a>
-                        <a href="http://www.plus.google.com/#" class="fa fa-google color-icon" title="google"></a>
-                        <a href="http://www.youtube.com/#" class="fa fa-youtube-play color-icon" title="youtube-play"></a>
-                        <a href="http://www.linkedin.com/#" class="fa fa-linkedin color-icon" title="linkedin"></a>
+                        <a href="https://www.facebook.com/ONLINEITVISION" target="_blank" class="fa fa-facebook color-icon" title="facebook"></a>
+                        <a href="https://www.instagram.com/it_vision_lb/" target="_blank" class="fa fa-instagram color-icon" title="instagram"></a>
+                        <a href="https://www.linkedin.com/company/it-vision-lebanon/" target="_blank" class="fa fa-linkedin color-icon" title="linkedin"></a>
                     </div>
                 </div>
             </div>
@@ -25,7 +23,7 @@
             <div class="divider-20 d-none d-lg-block"></div>
             <div class="col-md-12 text-center">
                 <p>&copy; Copyright
-                    <span class="copyright_year">2018</span> All Rights Reserved</p>
+                    <span class="copyright_year">2022</span> All Rights Reserved</p>
             </div>
             <div class="divider-20 d-none d-lg-block"></div>
         </div>

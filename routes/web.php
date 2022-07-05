@@ -41,6 +41,9 @@ Route::get('/contact-us', function () {
     return view('contact-us.index');
 });
 
+Route::post('/career/create', 'App\Http\Controllers\CareerController@store')
+  ->name('career.store');
+
 Route::post('/contact/create', 'App\Http\Controllers\ContactController@store')
     ->name('contact.store');
 

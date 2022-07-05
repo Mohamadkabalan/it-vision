@@ -25,9 +25,6 @@
                         <li class="breadcrumb-item">
                             <a href="./">Home</a>
                         </li>
-                        <li class="breadcrumb-item">
-                            <a href="#">Pages</a>
-                        </li>
                         <li class="breadcrumb-item active">
                             About
                         </li>
@@ -49,12 +46,12 @@
                             "We love what we do and we love helping others succeed at what they love to do."
                         </h5>
                         <i class="rt-icon2-user"></i>
-                        <p>
+{{--                        <p>
                             Gregory F. Parrino,
                             <span class="link-a">
 										<a href="#">CEO</a>
 									</span>
-                        </p>
+                        </p>--}}
 
                         <div class="divider-10 d-none d-xl-block"></div>
                     </div>
@@ -116,185 +113,6 @@
             </div>
         </div>
     </section>
-    <section class="s-pt-20 s-pt-lg-30 gallery-carousel main-gallery container-px-0">
-        <div class="container-fluid">
-            <div class="divider-5 d-none d-xl-block"></div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="owl-carousel gallery-owl-nav" data-autoplay="false" data-responsive-lg="5" data-responsive-md="3" data-responsive-sm="3" data-responsive-xs="2" data-nav="true" data-dots="false" data-filters=".gallery-filters" data-margin="0" data-loop="true">
-                        <div class="vertical-item item-gallery content-absolute text-center ds web-design">
-                            <div class="item-media">
-                                <img src="images/gallery/gallery-1.jpg" alt="">
-                                <div class="media-links">
 
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <h6>
-                                    <a class="small-text" href="gallery-regular.html">web-design</a>
-                                </h6>
-                                <h6>
-                                    <a href="gallery-regular.html">Clothes Badge Design</a>
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="vertical-item item-gallery content-absolute text-center ds logo-design">
-                            <div class="item-media">
-                                <img src="images/gallery/gallery-2.jpg" alt="">
-                                <div class="media-links">
-
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <h6>
-                                    <a class="small-text" href="gallery-regular.html">logo-design</a>
-                                </h6>
-                                <h6>
-                                    <a href="gallery-regular.html">Clothes Badge Design</a>
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="vertical-item item-gallery content-absolute text-center ds advertisement">
-                            <div class="item-media">
-                                <img src="images/gallery/gallery-3.jpg" alt="">
-                                <div class="media-links">
-
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <h6>
-                                    <a class="small-text" href="gallery-regular.html">advertisement</a>
-                                </h6>
-                                <h6>
-                                    <a href="gallery-regular.html">Clothes Badge Design</a>
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="vertical-item item-gallery content-absolute text-center ds branding">
-                            <div class="item-media">
-                                <img src="images/gallery/gallery-4.jpg" alt="">
-                                <div class="media-links">
-
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <h6>
-                                    <a class="small-text" href="gallery-regular.html">branding</a>
-                                </h6>
-                                <h6>
-                                    <a href="gallery-regular.html">Clothes Badge Design</a>
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="vertical-item item-gallery content-absolute text-center ds design">
-                            <div class="item-media">
-                                <img src="images/gallery/gallery-5.jpg" alt="">
-                                <div class="media-links">
-
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <h6>
-                                    <a class="small-text" href="gallery-regular.html">design</a>
-                                </h6>
-                                <h6>
-                                    <a href="gallery-regular.html">Clothes Badge Design</a>
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="vertical-item item-gallery content-absolute text-center ds photo">
-                            <div class="item-media">
-                                <img src="images/gallery/gallery-6.jpg" alt="">
-                                <div class="media-links">
-
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <h6>
-                                    <a class="small-text" href="gallery-regular.html">photo</a>
-                                </h6>
-                                <h6>
-                                    <a href="gallery-regular.html">Clothes Badge Design</a>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- .owl-carousel-->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="page_slider">
-        <div class="shortcode-team-slider">
-            <h3 class="slider-title">Team</h3>
-            <h3 class="slider-title d-none d-lg-block d-xl-none">Team</h3>
-            <div class="flexslider team-slider" data-nav="false" data-dots="true">
-                <ul class="slides">
-                    <li class="ls">
-                        <img src="images/team/team_slide_01.jpg" alt="">
-                    </li>
-                    <li class="ls">
-                        <img src="images/team/team_slide_02.jpg" alt="">
-                    </li>
-                    <li class="ls">
-                        <img src="images/team/team_slide_03.jpg" alt="">
-                    </li>
-                    <li class="ls">
-                        <img src="images/team/team_slide_04.jpg" alt="">
-                    </li>
-                </ul>
-            </div>
-            <!-- eof flexslider -->
-            <div class="flexslider-controls">
-                <ul class="flex-control-nav-1">
-                    <li class="menu_item">
-                        Letha L. Young
-                        <span class="position">Marketer</span>
-                        <span class="team-social-icons">
-									<span class="social-icons">
-										<a href="#" class="fa fa-facebook color-icon border-icon rounded-icon" title="facebook"></a>
-										<a href="#" class="fa fa-twitter color-icon border-icon rounded-icon" title="twitter"></a>
-										<a href="#" class="fa fa-google color-icon border-icon rounded-icon" title="google"></a>
-									</span>
-								</span>
-                    </li>
-                    <li class="menu_item">
-                        Harold D. Cote
-                        <span class="position">Developer</span>
-                        <span class="team-social-icons">
-									<span class="social-icons">
-										<a href="#" class="fa fa-facebook color-icon border-icon rounded-icon" title="facebook"></a>
-										<a href="#" class="fa fa-twitter color-icon border-icon rounded-icon" title="twitter"></a>
-										<a href="#" class="fa fa-google color-icon border-icon rounded-icon" title="google"></a>
-									</span>
-								</span>
-                    </li>
-                    <li class="menu_item">
-                        Oren R. Odom
-                        <span class="position">Marketer</span>
-                        <span class="team-social-icons">
-									<span class="social-icons">
-										<a href="#" class="fa fa-facebook color-icon border-icon rounded-icon" title="facebook"></a>
-										<a href="#" class="fa fa-twitter color-icon border-icon rounded-icon" title="twitter"></a>
-										<a href="#" class="fa fa-google color-icon border-icon rounded-icon" title="google"></a>
-									</span>
-								</span>
-                    </li>
-                    <li class="menu_item flex-active">
-                        Gregory F. Parrino
-                        <span class="position">CEO</span>
-                        <span class="team-social-icons">
-									<span class="social-icons">
-										<a href="#" class="fa fa-facebook color-icon border-icon rounded-icon" title="facebook"></a>
-										<a href="#" class="fa fa-twitter color-icon border-icon rounded-icon" title="twitter"></a>
-										<a href="#" class="fa fa-google color-icon border-icon rounded-icon" title="google"></a>
-									</span>
-								</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
 @endsection

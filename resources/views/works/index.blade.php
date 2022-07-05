@@ -16,6 +16,9 @@
 
 @section('content-wrapper')
     @include('home.navbar')
+    @php
+        $galleries=\App\Gallery::all()->groupBy('type');
+    @endphp
     <section class="page_title ls s-py-50 corner-title ls invise overflow-visible">
         <div class="container">
             <div class="row">
@@ -25,11 +28,8 @@
                         <li class="breadcrumb-item">
                             <a href="./">Home</a>
                         </li>
-                        <li class="breadcrumb-item">
-                            <a href="#">Pages</a>
-                        </li>
                         <li class="breadcrumb-item active">
-                            Gallery Regular
+                           Works
                         </li>
                     </ol>
                     <div class="divider-15 d-none d-xl-block"></div>
@@ -48,255 +48,36 @@
                         <div class="col-md-10 col-xl-8">
                             <div class="filters gallery-filters small-text text-lg-right">
                                 <a href="#" data-filter="*" class="active selected">All</a>
-                                <a href="#" data-filter=".web-design">Web Design</a>
-                                <a href="#" data-filter=".logo-design">Logo Design</a>
-                                <a href="#" data-filter=".advertisement">Advertisement</a>
-                                <a href="#" data-filter=".branding">Branding</a>
-                                <a href="#" data-filter=".design">Design</a>
-                                <a href="#" data-filter=".photo">Photo</a>
+                                @foreach($galleries as $key => $gallery)
+                                    <a href="#" data-filter=".{{str_replace(' ','-',$key)}}">{{ ucwords($key)  }}</a>
+                                @endforeach
                             </div>
                         </div>
                     </div>
 
 
                     <div class="row isotope-wrapper masonry-layout c-mb-30" data-filters=".gallery-filters">
-
-                        <div class="col-xl-4 col-sm-6 web-design design">
-
+                        @foreach($galleries as $key => $group)
+                            @foreach($group as $gallery)
+                        <div class="col-xl-4 col-sm-6 {{str_replace(' ','-',$key)}} design">
                             <div class="vertical-item item-gallery content-absolute gallery text-center ls">
                                 <div class="item-media">
-                                    <img src="images/gallery/01.jpg" alt="">
+                                    <img src="{{ asset('storage/'.$gallery->image)}}" alt="">
                                     <div class="media-links">
                                     </div>
                                 </div>
                                 <div class="item-content">
                                     <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Lorem ipsum dolor sit</a>
+                                        <a class="tags small-text" href="{{$gallery->link}}" target="_blank">{{ ucwords($key)  }}</a>
                                     </h6>
                                 </div>
                             </div>
 
                         </div>
+                            @endforeach
+                        @endforeach
 
-                        <div class="col-xl-4 col-sm-6 advertisement branding">
-                            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-                                <div class="item-media">
-                                    <img src="images/gallery/02.jpg" alt="">
-                                    <div class="media-links">
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Amet consetetur sadip</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-sm-6 logo-design design advertisement">
-                            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-                                <div class="item-media">
-                                    <img src="images/gallery/03.jpg" alt="">
-                                    <div class="media-links">
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Elitr sed diam nonumy</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-sm-6 web-design logo-design">
-                            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-                                <div class="item-media">
-                                    <img src="images/gallery/04.jpg" alt="">
-                                    <div class="media-links">
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Tempor invidunt ut</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-sm-6 advertisement photo branding">
-                            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-                                <div class="item-media">
-                                    <img src="images/gallery/05.jpg" alt="">
-                                    <div class="media-links">
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Labore et dolore magna</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-sm-6 logo-design photo design branding">
-                            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-                                <div class="item-media">
-                                    <img src="images/gallery/06.jpg" alt="">
-                                    <div class="media-links">
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Aliquyam erat sed diam</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-sm-6 web-design design advertisement">
-                            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-                                <div class="item-media">
-                                    <img src="images/gallery/07.jpg" alt="">
-                                    <div class="media-links">
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Voluptua vero</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-sm-6 web-design logo-design branding">
-                            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-                                <div class="item-media">
-                                    <img src="images/gallery/08.jpg" alt="">
-                                    <div class="media-links">
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Eos et accusam justo duo</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-sm-6 web-design photo design">
-
-                            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-                                <div class="item-media">
-                                    <img src="images/gallery/09.jpg" alt="">
-                                    <div class="media-links">
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Consectetur adicing elit</a>
-                                    </h6>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-xl-4 col-sm-6 advertisement branding">
-                            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-                                <div class="item-media">
-                                    <img src="images/gallery/10.jpg" alt="">
-                                    <div class="media-links">
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Dolores et ea rebum</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-sm-6 logo-design design advertisement">
-                            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-                                <div class="item-media">
-                                    <img src="images/gallery/11.jpg" alt="">
-                                    <div class="media-links">
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Stet clita kasd gubergren</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-sm-6 web-design logo-design">
-                            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-                                <div class="item-media">
-                                    <img src="images/gallery/12.jpg" alt="">
-                                    <div class="media-links">
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6>
-                                        <a class="tags small-text" href="/gallery-item.html">Photo</a>
-                                        <br>
-                                        <a href="/gallery-item.html">Clita kasd gubergren</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                     <!-- .isotope-wrapper-->
-
-                    <nav class="navigation pagination @@navClass" role="navigation">
-                        <h2 class="screen-reader-text">Posts navigation</h2>
-                        <div class="nav-links">
-                            <a class="prev page-numbers" href="blog-1.html">
-                                <i class="fa fa-chevron-left"></i>
-                                <span class="screen-reader-text">Previous page</span>
-                            </a>
-                            <span class="page-numbers current">
-										<span class="meta-nav screen-reader-text">Page </span>
-										1
-									</span>
-                            <a class="page-numbers" href="blog-1.html">
-                                <span class="meta-nav screen-reader-text">Page </span>
-                                2
-                            </a>
-                            <a class="page-numbers" href="blog-1.html">
-                                <span class="meta-nav screen-reader-text">Page </span>
-                                3
-                            </a>
-                            <a class="next page-numbers" href="blog-1.html">
-                                <span class="screen-reader-text">Next page</span>
-                                <i class="fa fa-chevron-right"></i>
-                            </a>
-                        </div>
-                    </nav>
                 </div>
             </div>
         </div>
