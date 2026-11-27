@@ -102,6 +102,7 @@
 
 <!-- Scripts here -->
 <script src="{{ asset('js/compressed.js') }}"></script>
+<script>window.instagramToken = @json(config('services.instagram.token'));</script>
 <script src="{{ asset('js/main.js') }}"></script>
 
 @show

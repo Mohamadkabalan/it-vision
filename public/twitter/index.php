@@ -23,17 +23,12 @@ if(empty($_POST)) { die(); }
 class ezTweet {
 	/*************************************** config ***************************************/
 
-	// Your Twitter App Consumer Key
-	private $consumer_key = '__REMOVED_TWITTER_CONSUMER_KEY__';
-
-	// Your Twitter App Consumer Secret
-	private $consumer_secret = '__REMOVED_TWITTER_CONSUMER_SECRET__';
-
-	// Your Twitter App Access Token
-	private $user_token = '__REMOVED_TWITTER_ACCESS_TOKEN__';
-
-	// Your Twitter App Access Token Secret
-	private $user_secret = '__REMOVED_TWITTER_ACCESS_TOKEN_SECRET__';
+	// Twitter app credentials. They are read from the project's .env in the constructor
+	// (TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET).
+	private $consumer_key = '';
+	private $consumer_secret = '';
+	private $user_token = '';
+	private $user_secret = '';
 
 	// Path to tmhOAuth libraries
 	private $lib = './lib/';
@@ -53,6 +48,17 @@ class ezTweet {
 	/**************************************************************************************/
 
 	public function __construct() {
+		// Load the Laravel .env file (this script runs outside Laravel).
+		$root = dirname(__DIR__, 2);
+		if (is_file($root . '/vendor/autoload.php')) {
+			require_once $root . '/vendor/autoload.php';
+			Dotenv\Dotenv::createImmutable($root)->safeLoad();
+		}
+		$this->consumer_key    = $_ENV['TWITTER_CONSUMER_KEY'] ?? '';
+		$this->consumer_secret = $_ENV['TWITTER_CONSUMER_SECRET'] ?? '';
+		$this->user_token      = $_ENV['TWITTER_ACCESS_TOKEN'] ?? '';
+		$this->user_secret     = $_ENV['TWITTER_ACCESS_TOKEN_SECRET'] ?? '';
+
 		// Initialize paths and etc.
 		$this->pathify($this->cache_dir);
 		$this->pathify($this->lib);

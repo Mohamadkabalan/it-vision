@@ -1290,7 +1290,7 @@ function windowLoadInit() {
 	// Instagram widget
 	if($().spectragram) {
 		var Spectra = {
-			instaToken: '__REMOVED_INSTAGRAM_ACCESS_TOKEN__',
+			instaToken: window.instagramToken || '', // set in layouts/master.blade.php from INSTAGRAM_ACCESS_TOKEN
 			instaID: '60c782dfecaf4050b59ff4c159246641',
 
 			init: function () {
