@@ -1,66 +1,50 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# IT Vision Website
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> This is an older copy. The maintained version, with full history and the latest changes, is the `itvision` repository on the same account.
 
-## About Laravel
+A company website built for a client in IT and web services. Staff manage the banners, services and portfolio gallery in an admin panel. Visitors can browse the services and portfolio, send a contact message, or apply for a job with a CV upload.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Built on:**
+- [Laravel](https://laravel.com) 8 application skeleton (MIT)
+- [Voyager](https://voyager.devdojo.com) admin panel (`tcg/voyager`, MIT), mounted at `/admin`
+- A third-party HTML/CSS site template (Bootstrap-based, vendor not identified) for the front-end design
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The custom work is the Laravel integration: Blade layouts and partials built from the template, models, controllers, routes, and the contact and careers forms.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Features
 
-## Learning Laravel
+- Home page with a database-driven hero banner and portfolio gallery, plus about, services, process steps, testimonials and a contact section
+- Services list with AJAX pagination, and service detail pages
+- "Works" portfolio page fed from the gallery content
+- Careers page: an application form with a resume upload, stored through Voyager's storage disk (`app/Services/FileContent.php`)
+- Contact form that saves messages through a JSON endpoint
+- Content managed through Voyager BREAD screens
+- `Localization` middleware with English and Arabic translation files
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+PHP 7.3/8, Laravel 8, Voyager 1.5, Intervention Image, MySQL, Blade, jQuery, Bootstrap. Docker files for Laravel Sail are included.
 
-## Laravel Sponsors
+## Getting started
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+composer install
+cp .env.example .env          # set DB credentials and APP_URL
+php artisan key:generate
+php artisan migrate
+php artisan db:seed           # Voyager roles, permissions, menus and settings
+php artisan storage:link
+php artisan serve
+```
 
-### Premium Partners
+The content tables (banners, galleries, services, careers, contacts and so on) are not covered by migrations in this repository. Create them through Voyager's database manager or from a database export.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+## Project structure
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+app/*.php                       models: Banner, Gallery, Service, Career, Contact, Blog, About
+app/Http/Controllers/           Services, Career, Contact
+app/Services/FileContent.php    upload helper for the careers form
+resources/views/                Blade views (home/, about/, services/, works/, career/, contact-us/)
+resources/lang/{en,ar}/         translation strings
+```
